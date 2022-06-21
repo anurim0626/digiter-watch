@@ -23,6 +23,13 @@
 ## ✨디지털시계 JS
 
 ![image](https://user-images.githubusercontent.com/102803326/174728062-edec9ce0-1cff-45e2-acc7-e159cd972e19.png)
+ 1. 함수를 만들고 new Date( ) 객체를 활용해 시간을 받아온다.
+ 
+ 2. getHours( ), getMinutes( ), date.getSeconds( ) 메소드로 각각의 값을 Text로 추가해준다.
+
+
+
+
 
 ## 🖨🖨결과화면 출력🖨🖨
 
