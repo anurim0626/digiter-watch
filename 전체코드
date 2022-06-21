@@ -1,0 +1,86 @@
+-js-
+
+
+
+let handleId = 0; 
+const h1 = document.getElementById("time")
+const go = document.getElementById("go")
+const stop = document.getElementById("stop")
+ 
+function getTime(){
+  const date = new Date()
+  const hour = date.getHours();
+  const minutes = date.getMinutes();
+  const seconds = date.getSeconds();
+  const time = `${hour<10?'0'+hour:hour}:${minutes<10?'0'+minutes:minutes}:${seconds<10?'0'+seconds:seconds}`
+  h1.textContent = time;
+}
+ 
+go.onclick = function(){
+  if(handleId == 0){
+    handleId = setInterval(getTime, 1000)
+  }
+}
+ 
+stop.onclick = function(){
+  clearInterval(handleId)
+  handleId = 0;
+}
+ 
+getTime()
+
+
+
+
+=======================================================================
+
+-css-
+
+html, body {
+	margin: -0;
+}
+		
+.container{
+	text-align: center;
+}
+		
+.clock {
+	width:200px;
+	margin: 5px auto;
+	border: 2px solid black;
+	border-radius: 10px;
+}
+
+h1 {
+	background-color: black;
+	color: white;
+	text-align: center;
+}
+
+======================================================================
+-html-
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" 
+  content="width=device-width, initial-scale=1.0">
+  <title>digital</title>
+  <link href="css/style.css???" rel="stylesheet">
+</head>
+<body>
+	<h1>디지털 시계</h1>
+	
+  	<div class="container">
+    	<div class="clock">
+      		<h1 id="time"></h1>
+    	</div>
+    	<button id="stop">STOP</button>
+    	<button id="go">GO</button>
+  	</div>
+  	
+<script src="script.js"></script>
+
+</body>
+</html>
