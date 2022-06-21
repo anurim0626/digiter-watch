@@ -1,4 +1,4 @@
-# ⏰digiter-watch⏰
+# ⏰digital-watch⏰
 
 ## ✨디지털시계 HTML
 
